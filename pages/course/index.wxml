@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="bargain-wrapper">
+    <view class="bargain-item" wx:for="{{bargainList}}" wx:key="*this" bindtap="goDetail">
+      <image class="bargain-img" src="{{item.img}}"></image>
+      <view class="bargain-info">
+        <view class="info-header">
+          <text class="title">{{item.title}}</text>
+          <text class="desc">{{item.desc}}</text>
+        </view>
+        <view class="info-price">
+          <view class="base-price">
+            <text class="money">￥{{item.basePrice}}</text>
+            <text>底价</text>
+          </view>
+          <view class="original-price">
+            <text>￥{{item.originalPrice}}</text>
+            <text>原价</text>
+          </view>
+          <view class="limit">
+            <text>￥{{item.limit}}</text>
+            <text>限量</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="bottom-tip">
+    <text>到底了，再往上逛逛吧~</text>
+  </view>
+</view>
